@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>progress bar</title>
+</head>
+<style>
+    .container{
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+
+    .progress{
+        position: relative;
+        border: 2px solid black;
+        overflow: hidden;
+        width: 17rem; height:1.5rem;
+    }
+
+    .bar{
+        position: absolute;
+        background-color: rgb(88, 46, 168);
+        width: 0px;
+        height: 1.5rem;
+        /* animation: bar 3s linear infinite; */
+        /* or  */
+        animation: bar 3s infinite steps(15);
+    }
+
+    @keyframes bar{
+        0%{ width: 0%;}
+        100%{ width: 100%;}
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="progress">
+            <div class="bar"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+thanks for watching.
